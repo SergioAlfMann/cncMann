@@ -1,0 +1,78 @@
+
+//variables
+$fondo-boton: #D7DBDD;
+$boton-hover:#a8a8a8;
+$imagen-somos:150px;
+
+
+
+
+.btn-primary{
+  background-color: $fondo-boton;
+  border-color: $fondo-boton;
+  box-shadow: 3px 3px 5px 3px #999;
+}
+.btn-primary:hover {
+  
+  background-color:$boton-hover;
+  border-color: $boton-hover;
+}
+
+/*se aplica for y If*/
+
+@for $i from 1 through 3 {
+  .flexrostro#{$i} img
+  { width: 187*1.443px;
+    height: 187px;    
+  }
+
+  .flexrostro#{$i} p
+  {
+      padding-left: 50px;
+      padding-right: 50px;
+  }
+  
+
+    @if $i==1{
+    .uno p {
+        color:rgb(31, 30, 30) ;
+      }
+    } @else if $i==2{
+      .dos p {
+        color:rgb(68, 67, 67);
+      }
+    }
+    @else{
+      .tres p{
+        color: grey;
+      }
+    }   
+    
+    
+}
+
+
+
+/* se aplica maps y each*/
+
+$redes:(
+  face:rgb(31, 30, 30),
+  twi:rgb(68, 67, 67),
+  insta:grey,
+ 
+);
+
+@each $red,$color in $redes{
+  .headRedes .red#{$red}{
+    color:$color;
+  }
+}
+
+.somos img{
+  width: $imagen-somos;
+  height: $imagen-somos;
+}
+
+
+
+

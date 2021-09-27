@@ -1,0 +1,56 @@
+.btn-primary {
+  background-color: #D7DBDD;
+  border-color: #D7DBDD;
+  box-shadow: 3px 3px 5px 3px #999; }
+
+.btn-primary:hover {
+  background-color: #a8a8a8;
+  border-color: #a8a8a8; }
+
+/*se aplica for y If*/
+.flexrostro1 img {
+  width: 269.841px;
+  height: 187px; }
+
+.flexrostro1 p {
+  padding-left: 50px;
+  padding-right: 50px; }
+
+.uno p {
+  color: #1f1e1e; }
+
+.flexrostro2 img {
+  width: 269.841px;
+  height: 187px; }
+
+.flexrostro2 p {
+  padding-left: 50px;
+  padding-right: 50px; }
+
+.dos p {
+  color: #444343; }
+
+.flexrostro3 img {
+  width: 269.841px;
+  height: 187px; }
+
+.flexrostro3 p {
+  padding-left: 50px;
+  padding-right: 50px; }
+
+.tres p {
+  color: grey; }
+
+/* se aplica maps y each*/
+.headRedes .redface {
+  color: #1f1e1e; }
+
+.headRedes .redtwi {
+  color: #444343; }
+
+.headRedes .redinsta {
+  color: grey; }
+
+.somos img {
+  width: 150px;
+  height: 150px; }
