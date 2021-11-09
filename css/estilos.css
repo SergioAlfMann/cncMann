@@ -338,7 +338,10 @@ background-color: #D7DBDD;
    
  }
 
-
+.precio{
+  padding-left: 40px;
+  padding-top: 15px;
+}
 
 
 /*------------------gradiente --------------------*/
