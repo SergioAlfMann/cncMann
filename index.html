@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="img/png" sizes="16x16" href="img/logo.jpg">
@@ -16,6 +17,7 @@
     a gran escala, lo que reduce los costos. Tus muebles con CNC son muebles portables, son muebles encastrables y de fácil
     almacenamiento">
     <meta name="keywords" content="MUEBLES, CNC, ENCASTRABLES, PORTABLE">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -68,7 +70,7 @@
                             <main id="items" class="col-sm-8 row"></main>
                             <!-- Carrito -->
                             <aside class="col-sm-3">
-                                <h5 class="text-left pt-5 pb-5">Carrito</h5>   
+                                <h5  class="text-left pt-5 pb-5 carritoTexto">Carrito</h5>   
                                 <!-- Elementos del carrito -->
                                 <ul id="carrito" class="list-group"></ul>
                                 <hr>
@@ -285,14 +287,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/miarchivo.js"></script>
-<script>
-    $(document).ready(function(){
-        $('.zoom').hover(function() {
-            $(this).addClass('transition');
-        }, function() {
-            $(this).removeClass('transition');
-        });
-    });
-    </script>
+
 </body >
 </html>

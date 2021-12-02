@@ -1,6 +1,5 @@
 
- //window.onload = function () {
-  // Variables
+
   const baseDeDatos = [
       {
           id: 1,
@@ -38,7 +37,7 @@
 
 let carrito = [];
 let total = 0;
-const DOMitems = document.querySelector('#items');
+//const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
 const DOMtotal = document.querySelector('#total');
 const DOMbotonVaciar = document.querySelector('#boton-vaciar');
@@ -75,7 +74,8 @@ function anyadirProductoAlCarrito(evento) {          // Anyadimos el Nodo a nues
 
 
 function renderizarCarrito() {    // Vaciamos todo el html
-  DOMcarrito.textContent = '';    // Quitamos los duplicados
+  //DOMcarrito.textContent = '';    
+  DOMcarrito.innerHTML = ''; // Quitamos los duplicados
   const carritoSinDuplicados = [...new Set(carrito)]; // Generamos los Nodos a partir de carrito
   carritoSinDuplicados.forEach((item) => {  // Obtenemos el item que necesitamos de la variable base de datos
       
@@ -87,7 +87,7 @@ function renderizarCarrito() {    // Vaciamos todo el html
       }, 0);
       const miNodo = document.createElement('li'); // Creamos el nodo del item del carrito
       miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}$`;
+      miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - $ ${miItem[0].precio}`;
       const miBoton = document.createElement('button'); // Boton de borrar
       miBoton.classList.add('btn', 'btn-primary', 'mx-5');
       miBoton.textContent = 'Eliminar';
@@ -113,7 +113,6 @@ function borrarItemCarrito(evento) {    // Obtenemos el producto ID que hay en e
 }
 
 
-
 function guardarCarritoEnLocalStorage () {
   console.log(JSON.stringify(carrito))
   miLocalStorage.setItem('carrito', JSON.stringify(carrito)); 
@@ -130,6 +129,24 @@ function cargarCarritoDeLocalStorage () {
 cargarCarritoDeLocalStorage();          
 calcularTotal();
 renderizarCarrito();
+
+
+
+$(document).ready(function(){
+  $('.zoom').hover(function() {
+      $(this).addClass('transition');
+  }, function() {
+      $(this).removeClass('transition');
+  });
+
+}); 
+
+$(document).ready(function(){
+  $('.carritoTexto').hover(function(){
+    $('.carritoTexto').hide(5000);
+    $('.carritoTexto').show(5000);
+  });
+});
 
 
 

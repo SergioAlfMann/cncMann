@@ -12,6 +12,10 @@ header .logo{
   width: 70px;  
 }
 
+.carritoTexto{
+  margin-left: 150px;
+  
+}
 
 .colorDefinido{
     background: var(--c-barra);
