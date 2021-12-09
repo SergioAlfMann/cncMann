@@ -17,6 +17,10 @@ header .logo{
   
 }
 
+#dolar{
+  padding-top: 10px;
+}
+
 .colorDefinido{
     background: var(--c-barra);
 

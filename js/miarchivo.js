@@ -149,7 +149,24 @@ $(document).ready(function(){
 });
 
 
+const urlGet = "https://www.dolarsi.com/api/api.php?type=valoresprincipales"
+$("#dolar").prepend('<button class="btn btn-primary dolar">Ver cotización Dolar</button>');
 
+$(".dolar").click(() =>{
+    $.get(urlGet, function(respuesta, estado){
+        
+        if(estado == "success"){
+            let datos = respuesta;
+            
+           // for(const dato of datos){
+                $("#dolar").prepend(`<div>
+                                    <p> Precio de compra:$ ${datos[0].casa.compra}</p>
+                                    <p> Precio de Venta:$ ${datos[0].casa.venta}</p>
+                                     </div>`)
+            //}
+        }
+    })
+}) 
 
 
 
